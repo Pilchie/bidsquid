@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  bidsquid-web:
+    image: bidsquid-web
+    build:
+      context: ./bidsquid-web
+      dockerfile: Dockerfile
