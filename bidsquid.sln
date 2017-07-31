@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bidsquid-web", "src\bidsquid-web\bidsquid-web.csproj", "{07CB8459-D6DF-41E8-AE44-A8920C82FCD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bidsquid-web", "src\bidsquid-web\bidsquid-web.csproj", "{07CB8459-D6DF-41E8-AE44-A8920C82FCD8}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "src\docker-compose.dcproj", "{BF8776C7-AAFF-4FE2-92D7-36C4DCF3711A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07CB8459-D6DF-41E8-AE44-A8920C82FCD8} = {07CB8459-D6DF-41E8-AE44-A8920C82FCD8}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
