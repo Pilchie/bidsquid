@@ -17,5 +17,16 @@ namespace bidsquid_test
             Assert.Equal(DateTime.Today, auction.Date);
             Assert.Equal(tagLine, auction.TagLine);
         }
+
+        [Fact]
+        public async Task AuctionItems()
+        {
+            var auction = new AuctionViewModel(DateTime.Today, string.Empty);
+            Assert.Empty(auction.Items);
+
+            var description = "VS 2017";
+            await auction.AddItemAsync(description);
+            Assert.Contains(new AuctionItem(description, 0m), auction.Items);
+        }
     }
 }
