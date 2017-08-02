@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  bidsquid-web:
+    image: bidsquid-web:dev
+    build:
+      args:
+        source: .
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
+    volumes:
+      - /Users/pilchie/code/bidsquid/src/bidsquid-web:/app
+      - /Users/pilchie/.nuget/packages/:/root/.nuget/packages:ro
+      - /usr/local/share/dotnet/sdk/NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+
+    entrypoint: tail -f /dev/null
