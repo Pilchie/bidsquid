@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\bidsquid-web\bidsquid-web.csproj" />
+    <ProjectReference Include="..\..\src\bidsquid-web\bidsquid-web.csproj" />
   </ItemGroup>
 
 </Project>
